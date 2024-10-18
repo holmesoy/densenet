@@ -2,6 +2,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+'''
+作为示例仅实现了两层denseblock与一层transition,
+输出每经过一层后的矩阵大小，最后输出loss
+'''
+
 
 class DenseLayer(nn.Module):
     #Dense层
@@ -119,6 +124,7 @@ if __name__ == "__main__":
     criterion = nn.CrossEntropyLoss()  # Loss function for classification
     optimizer = torch.optim.SGD(model.parameters(), lr=0.01, momentum=0.9)  # Optimizer
     x = torch.randn(1, 3, 256, 256)
+    #输入一个随机的测试值
     output = model(x)
     print("Final Output: ", output.shape)  # Should be [1, 10] for 10 classes
 
@@ -134,7 +140,9 @@ if __name__ == "__main__":
     # output = model(x)
     # loss = criterion(output, targets)
     # print("Loss after one step of optimization:", loss.item())
-    #
+    # #可以输出经过反向传播过后的loss值
+
+
     # # 第二次反向传播
     # optimizer.zero_grad()  # Clear gradients
     # loss.backward()  # Compute gradients
