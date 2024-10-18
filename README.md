@@ -4,12 +4,12 @@
 **DenseNet**:采用密集连接机制，即互相连接所有的层，每个层都会与前面的层在channel(通道)维度上连接道一起，实现特征重用，作为下一层的输入。
 
 这样操作的好处在于 不仅减缓了梯度消失的问题，也可使其在参数与计算量更少的情况下实现比Resnet更优的性能。
-![输入图片说明](/imgs/2024-10-18/UpOFqe8vbOj3r5I2.png)![](https://i-blog.csdnimg.cn/blog_migrate/3f469933cb37b6af6e301e88b22e28c8.png)
+![输入图片说明](/imgs/2024-10-18/UpOFqe8vbOj3r5I2.png)
 
 ## 	网络结构
 **DenseNet**网络中模块主要由 ****DenseBlock+Transition**** 组成
 
-![输入图片说明](/imgs/2024-10-18/udaogzMyMcD0tIIp.png)![](https://i-blog.csdnimg.cn/blog_migrate/39693dc9da1db59538c36be072105377.png)
+![输入图片说明](/imgs/2024-10-18/udaogzMyMcD0tIIp.png)
 
 ###  1. DenseLayer
 
